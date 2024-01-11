@@ -36,10 +36,10 @@ jobs:
               shell: bash
               env:
                 REPO: ghcr.io/${{ github.repository_owner }}/buildpacks
-            - id: register
-              uses: docker://ghcr.io/buildpacks/actions/registry/request-add-entry:4.1.0
-              with:
-                token:   ${{ secrets.PUBLIC_REPO_TOKEN }}
-                id:      ${{ steps.package.outputs.bp_id }}
-                version: ${{ steps.package.outputs.version }}
-                address: ${{ steps.package.outputs.address }}
+            # - id: register
+            #   uses: docker://ghcr.io/buildpacks/actions/registry/request-add-entry:4.1.0
+            #   with:
+            #     token:   ${{ secrets.PUBLIC_REPO_TOKEN }}
+            #     id:      ${{ steps.package.outputs.bp_id }}
+            #     version: ${{ steps.package.outputs.version }}
+            #     address: ${{ steps.package.outputs.address }}
